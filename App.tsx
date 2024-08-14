@@ -11,12 +11,22 @@ import Login from './src/pages/Login';
 import Signup from './src/pages/Signup';
 import Homepage from './src/pages/Homepage';
 import Orthopage from './src/pages/Orthopage';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+
+const Stack = createStackNavigator();
 
 function App(): React.JSX.Element {
   return (
-    <>
-      <Orthopage />
-    </>
+    // <NavigationContainer>
+    //   <Stack.Navigator>
+    //     <Stack.Screen name="Home" component={Getstarted} />
+    //     <Stack.Screen name="Login" component={Login} />
+    //     <Stack.Screen name="Profile" component={Login} />
+    //     <Stack.Screen name="Settings" component={Signup} />
+    //   </Stack.Navigator>
+    // </NavigationContainer>
+    <Orthopage/>
   );
 }
 
