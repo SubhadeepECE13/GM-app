@@ -1,4 +1,3 @@
-import Arrow_image from '../assets/Arrow_image.png';
 import React, {useState} from 'react';
 import {
   StyleSheet,
@@ -12,7 +11,7 @@ import {
 import Button from '../components/Button';
 import box from '../assets/box.png';
 import boxChecked from '../assets/Check.png';
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 import BackButton from '../components/BackButton';
 
 const Signup = () => {
@@ -25,10 +24,10 @@ const Signup = () => {
   }
   return (
     <View style={{height}}>
-      <BackButton/>
+      <BackButton />
       <View
         style={{
-          height: '54%',
+          height: '44%',
           display: 'flex',
           justifyContent: 'space-between',
           marginHorizontal: 20,
@@ -78,7 +77,7 @@ const Signup = () => {
           />
         </View>
 
-        <View style={{flexDirection: 'row'}}>
+        <View style={{flexDirection: 'row', marginHorizontal: 20}}>
           <TouchableOpacity onPress={check}>
             <Image
               source={checkbox ? boxChecked : box}
@@ -109,29 +108,38 @@ const Signup = () => {
             Conditions
           </Text>
         </View>
-
-        <Button buttonName="Sign Up" onPress={()=>{navigation.navigate('HomePage')}}/>
       </View>
+      <View style={{marginHorizontal: 20, marginTop: 100}}></View>
       <View
         style={{
-          height: '27%',
+          height: '37%',
           display: 'flex',
-          justifyContent: 'space-between',
+          justifyContent: 'space-around',
           alignItems: 'center',
-          marginTop: 20,
-        }}></View>
-
-      <View
-        style={{
-          flexDirection: 'row',
-          width: '100%',
-          justifyContent: 'center',
-          display: 'flex',
+          marginHorizontal: 20,
         }}>
-        <Text style={styles.headingText}>Already Register? </Text>
-        <TouchableOpacity onPress={()=>{navigation.navigate('Login')}}>
-          <Text style={styles.text}>Login</Text>
-        </TouchableOpacity>
+        <Button
+          buttonName="Sign Up"
+          onPress={() => {
+            navigation.navigate('HomePage');
+          }}
+        />
+
+        <View
+          style={{
+            flexDirection: 'row',
+            width: '100%',
+            justifyContent: 'center',
+            display: 'flex',
+          }}>
+          <Text style={styles.headingText}>Already Register? </Text>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('Login');
+            }}>
+            <Text style={styles.text}>Login</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );

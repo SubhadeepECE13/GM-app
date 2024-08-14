@@ -17,7 +17,7 @@ interface props {
 
 const ImageView: React.FC<props> = ({heading, image, btnName, about}) => {
   return (
-    <View style= {{marginHorizontal: 10, marginTop: 6}}>
+    <View style={{marginHorizontal: 10, marginTop: 6}}>
       <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
         <Text style={styles.headingText}> {heading}</Text>
         <TouchableOpacity>
@@ -27,7 +27,7 @@ const ImageView: React.FC<props> = ({heading, image, btnName, about}) => {
       <Text style={styles.aboutText}>{about}</Text>
       <Image
         source={image}
-        style={{width: "100%", height: 160, marginTop: 10}}
+        style={{width: '100%', height: 160, marginTop: 10}}
       />
     </View>
   );
@@ -47,8 +47,8 @@ const styles = StyleSheet.create({
   },
   aboutText: {
     color: '#3B3939',
-    fontSize: 6
-  }
+    fontSize: 6,
+  },
 });
 
 export default ImageView;

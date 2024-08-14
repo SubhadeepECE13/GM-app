@@ -3,15 +3,12 @@ import { StyleSheet, Text, View, Image, TouchableOpacity, Dimensions, ImageBackg
 import Card from '../components/Card'
 import NavigationBar from '../components/NavigationBar'
 import ham_image from '../assets/ham_image.png'
-import Arrow_image from '../assets/Arrow_image.png'
 import image_gyno from '../assets/image_gyno.png'
 import image_2 from '../assets/image_2.png'
-import { useNavigation } from '@react-navigation/native'
 import BackButton from '../components/BackButton'
 
 const Gynopage = () => {
     const {width, height} = Dimensions.get('window');
-    const navigation = useNavigation();
     return (
       <View style={[styles.conainer, {height, width}]}>
         <View

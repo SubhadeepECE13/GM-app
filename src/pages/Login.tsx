@@ -1,4 +1,3 @@
-import Arrow_image from '../assets/Arrow_image.png';
 import React from 'react';
 import {
   StyleSheet,
@@ -23,7 +22,7 @@ const Login = () => {
   const { height} = Dimensions.get('window');
   const navigation = useNavigation();
   return (
-    <View style={{height}}>
+    <View style={{height, backgroundColor: 'white'}}>
       <BackButton/>
       <View
         style={{
@@ -38,26 +37,32 @@ const Login = () => {
           style={{
             borderColor: 'black',
             display: 'flex',
+            justifyContent: 'space-between',
             flexDirection: 'row',
             borderWidth: 1,
-            borderRadius: 20,
+            borderRadius: 100,
+            paddingVertical: 8,
+            paddingHorizontal: 10,
+            position: 'relative'
           }}>
+              <Text style = {{backgroundColor: 'white', color: 'black', fontWeight: '900',height: 20, position: 'absolute', top: -10, left: 30}}>EMAIL</Text>
+            
           <Image
             source={email}
             style={{height: 20, width: 20, marginLeft: 10, top: 15}}
           />
-          <TextInput placeholder="email" />
+          <TextInput placeholder="RT89851@GMAIL.COM" style = {{width: '85%'}}/>
         </View>
 
         <View
           style={{
-            borderColor: 'black',
             display: 'flex',
             flexDirection: 'row',
             paddingEnd: 5,
             justifyContent: 'space-between',
-            borderWidth: 1,
             borderRadius: 100,
+            backgroundColor: '#e9e9e9',
+            paddingVertical: 8
           }}>
           <Image
             source={lock}

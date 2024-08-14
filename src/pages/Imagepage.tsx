@@ -1,9 +1,3 @@
-import image_x from '../assets/image_x.png';
-import image_y from '../assets/image_y.png';
-import image_z from '../assets/image_z.png';
-import Skincare_image from '../assets/Skincare_image.png';
-import ham_image from '../assets/ham_image.png';
-import Arrow_image from '../assets/Arrow_image.png';
 import React from 'react';
 import {
   StyleSheet,
@@ -16,7 +10,10 @@ import {
 import BackButton from '../components/BackButton';
 import ImageView from '../components/ImageView';
 import NavigationBar from '../components/NavigationBar';
-import { ScrollView } from 'react-native-gesture-handler';
+import image_x from '../assets/image_x.png';
+import image_y from '../assets/image_y.png';
+import image_z from '../assets/image_z.png';
+import ham_image from '../assets/ham_image.png';
 
 const Imagepage = () => {
   const {width, height} = Dimensions.get('window');

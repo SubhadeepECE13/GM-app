@@ -3,7 +3,7 @@ import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 
 interface props {
   buttonName: string,
-  onPress: ()=>{}
+  onPress: ()=>void
 }
 
 const Button: React.FC<props> = ({buttonName, onPress}) => {
@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     justifyContent: 'center',
     height: 70,
+    width: '100%'
   },
   buttonText: {
     textAlign: 'center',

@@ -10,7 +10,6 @@ import {
 import Card from '../components/Card';
 import NavigationBar from '../components/NavigationBar';
 import ham_image from '../assets/ham_image.png';
-
 import image_1 from '../assets/image_1.png';
 import image_2 from '../assets/image_2.png';
 import { useNavigation } from '@react-navigation/native';

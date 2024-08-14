@@ -13,11 +13,11 @@ const Getstarted = () => {
   const navigation = useNavigation();
   const {width, height} = Dimensions.get('window');
   return (
-    <View style={{display: 'flex', justifyContent: 'space-between', height}}>
+    <View style={{display: 'flex', justifyContent: 'space-between', height, backgroundColor: 'white'}}>
       <Image source={banner_image} style={{width, height: 300}} />
       <Image
         source={logo_image}
-        style={{width: 160, height: 160, marginLeft: 115}}
+        style={{width: 160, height: 160, marginLeft: 100, marginBottom:40}}
       />
       <View style={{marginBottom: 30, marginHorizontal: 10}}>
         <Button buttonName="Get Started" onPress={() => navigation.navigate('Login')}/>

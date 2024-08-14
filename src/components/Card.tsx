@@ -1,8 +1,16 @@
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, Image, View} from 'react-native';
 
-const Card = ({bgColor, imageUrl, heading, about, textColor, text, navigationScreen}: any) => {
+const Card = ({
+  bgColor,
+  imageUrl,
+  heading,
+  about,
+  textColor,
+  text,
+  navigationScreen,
+}: any) => {
   const navigation = useNavigation();
 
   return (
@@ -15,7 +23,10 @@ const Card = ({bgColor, imageUrl, heading, about, textColor, text, navigationScr
           flexDirection: 'row',
           borderRadius: 20,
         },
-      ]} onPress={()=>{navigation.navigate(`${navigationScreen}`)}}>
+      ]}
+      onPress={() => {
+        navigation.navigate(`${navigationScreen}`);
+      }}>
       <Image
         source={imageUrl}
         style={{height: 120, width: 110, borderRadius: 10, marginRight: 20}}
@@ -29,10 +40,5 @@ const Card = ({bgColor, imageUrl, heading, about, textColor, text, navigationScr
     </TouchableOpacity>
   );
 };
-const styles = StyleSheet.create({
-  text: {
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-});
+
 export default Card;

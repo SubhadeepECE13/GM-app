@@ -12,7 +12,7 @@ import {
   Dimensions,
 } from 'react-native';
 import ImageButton from '../components/ImageButton';
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 
 const Homepage = () => {
   const {width, height} = Dimensions.get('window');
@@ -30,7 +30,13 @@ const Homepage = () => {
         <Text
           style={[
             styles.text,
-            {position: 'absolute', left: 50, right: 50, top: 2},
+            {
+              position: 'absolute',
+              left: 50,
+              right: 50,
+              top: 2,
+              fontFamily: 'Rubik',
+            },
           ]}>
           HOME
         </Text>
@@ -42,26 +48,64 @@ const Homepage = () => {
         </TouchableOpacity>
       </View>
 
-      <View style={{width: '80%', height: 120, backgroundColor: '#9391C0'}}>
-        <Text>Welcome Back......</Text>
-        <Text style={{fontWeight: 'bold', color: 'black'}}>
-          Hi, Lorem Ipsum
-        </Text>
-        <Text>Lorem ipsum dolor sit amet</Text>
+      <View
+        style={{
+          width: '80%',
+          height: 120,
+          backgroundColor: '#9391C0',
+          padding: 20,
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          marginTop: 30,
+        }}>
+        <View>
+          <Text style={{fontSize: 8, marginBottom: 4, textAlign: 'center'}}>
+            Welcome Back......
+          </Text>
+          <Text style={{fontWeight: 'bold', color: 'black', fontSize: 16}}>
+            Hi, Lorem Ipsum
+          </Text>
+          <Text style={{marginBottom: 5, fontSize: 10}}>
+            Lorem ipsum dolor sit amet
+          </Text>
 
-        <Text>consectetur adipiscing elit, sed do</Text>
+          <Text style={{fontSize: 10}}>
+            consectetur adipiscing elit, sed do
+          </Text>
+        </View>
+        <View style={{justifyContent: 'center'}}>
+          <Text>40 C</Text>
+        </View>
       </View>
       <View
         style={{
           display: 'flex',
-          justifyContent: 'space-between',
           marginBottom: 60,
           height: '70%',
           borderRadius: 90,
+          width,
         }}>
-          <ImageButton image = {ortho_image} text='GP and ORTHO' onPress={()=>{navigation.navigate('OrthoPage')}}/>
-          <ImageButton image = {gyno_image} text='GYNECOLOGY' onPress={()=>{navigation.navigate('GynoPage')}}/>
-          <ImageButton image = {Skincare_image} text='SKIN CARE' onPress={()=>{navigation.navigate('SkinCare')}}/>        
+        <ImageButton
+          image={ortho_image}
+          text="GP and ORTHO"
+          onPress={() => {
+            navigation.navigate('OrthoPage');
+          }}
+        />
+        <ImageButton
+          image={gyno_image}
+          text="GYNECOLOGY"
+          onPress={() => {
+            navigation.navigate('GynoPage');
+          }}
+        />
+        <ImageButton
+          image={Skincare_image}
+          text="SKIN CARE"
+          onPress={() => {
+            navigation.navigate('SkinCare');
+          }}
+        />
       </View>
     </View>
   );

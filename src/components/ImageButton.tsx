@@ -1,18 +1,31 @@
 import React from 'react';
-import { Image, ImageSourcePropType, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import {
+  Image,
+  ImageSourcePropType,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+} from 'react-native';
 
 interface props {
-    image: ImageSourcePropType,
-    text: string,
-    onPress: ()=>void
+  image: ImageSourcePropType;
+  text: string;
+  onPress: () => void;
 }
 
-const ImageButton: React.FC<props> = ({image, text,onPress }) => {
+const ImageButton: React.FC<props> = ({image, text, onPress}) => {
   return (
-    <TouchableOpacity onPress={onPress}>
+    <TouchableOpacity
+      onPress={onPress}
+      style={{marginHorizontal: 80, marginVertical: 4}}>
       <Image
         source={image}
-        style={{width: 220, height: 190, borderRadius: 20}}
+        style={{
+          width: '100%',
+          height: 170,
+          borderRadius: 20,
+          objectFit: 'cover',
+        }}
       />
 
       <Text style={styles.headingText}>{text}</Text>
@@ -21,11 +34,11 @@ const ImageButton: React.FC<props> = ({image, text,onPress }) => {
 };
 
 const styles = StyleSheet.create({
-    headingText: {
-      fontWeight: 'bold',
-      color: 'black',
-      textAlign: 'center',
-    },
-})
+  headingText: {
+    fontWeight: 'bold',
+    color: 'black',
+    textAlign: 'center',
+  },
+});
 
 export default ImageButton;
