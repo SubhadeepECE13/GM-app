@@ -11,8 +11,10 @@ import Login from './src/pages/Login';
 import Signup from './src/pages/Signup';
 import Homepage from './src/pages/Homepage';
 import Orthopage from './src/pages/Orthopage';
+import Imagepage from './src/pages/Imagepage';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+import { Image } from 'react-native';
 
 const Stack = createStackNavigator();
 
@@ -26,7 +28,7 @@ function App(): React.JSX.Element {
     //     <Stack.Screen name="Settings" component={Signup} />
     //   </Stack.Navigator>
     // </NavigationContainer>
-    <Orthopage/>
+    <Imagepage/>
   );
 }
 
