@@ -7,24 +7,17 @@
 
 import React from 'react';
 import Getstarted from './src/pages/Getstarted';
-import Register from './src/pages/Register';
-import Loginpage from './src/pages/Loginpage';
+import Login from './src/pages/Login';
+import Signup from './src/pages/Signup';
 import Homepage from './src/pages/Homepage';
 import Orthopage from './src/pages/Orthopage';
 
-
 function App(): React.JSX.Element {
- 
-
-  
-
   return (
-   <>
-   <Orthopage/>
-   </>
+    <>
+      <Signup />
+    </>
   );
 }
-
-
 
 export default App;
