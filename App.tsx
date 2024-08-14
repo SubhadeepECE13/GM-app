@@ -15,7 +15,7 @@ import Orthopage from './src/pages/Orthopage';
 function App(): React.JSX.Element {
   return (
     <>
-      <Signup />
+      <Orthopage />
     </>
   );
 }

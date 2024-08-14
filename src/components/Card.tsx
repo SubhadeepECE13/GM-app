@@ -1,11 +1,16 @@
 import React from 'react'
-import { StyleSheet, Text, TouchableOpacity,Image } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity,Image,View} from 'react-native'
 
 const Card = ({bgColor,imageUrl,heading,about,textColor,text}: any) => {
     return (
-        <TouchableOpacity style={[ { width:"90%",backgroundColor:`${bgColor}`,padding:20, flexDirection:"row",borderRadius:10, }]}>
+        <TouchableOpacity style={[ { width:"90%",backgroundColor:`${bgColor}`,padding:30, flexDirection:"row",borderRadius:20,}]}>
+
             <Image source={imageUrl} style={{height:130,width:110,borderRadius:10,marginRight:20}}/>
-            <Text style={{color:`${textColor}`,alignSelf:"center",alignItems:"center"}}>{heading}{about}{text}</Text>
+            <View style={{flexDirection:"column",alignItems:"flex-start",}}>
+            <Text style={{color:`${textColor}`,fontWeight:"bold"}}>{heading}</Text>
+            <Text style={{color:`${textColor}`,fontWeight:"400"}}>{about}</Text>
+
+            </View>
         </TouchableOpacity>
         
 
