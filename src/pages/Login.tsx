@@ -16,15 +16,15 @@ import eye from '../assets/eye.png';
 import google from '../assets/google.png';
 import apple from '../assets/apple.png';
 import facebook from '../assets/facebook.png';
+import { useNavigation } from '@react-navigation/native';
+import BackButton from '../components/BackButton';
 
 const Login = () => {
-  const {width, height} = Dimensions.get('window');
+  const { height} = Dimensions.get('window');
+  const navigation = useNavigation();
   return (
     <View style={{height}}>
-      <Image
-        source={Arrow_image}
-        style={{width: 30, height: 30, marginLeft: 5, marginTop: 5}}
-      />
+      <BackButton/>
       <View
         style={{
           height: '54%',
@@ -73,7 +73,7 @@ const Login = () => {
         <Text style={[styles.welcomeText, {textAlign: 'right'}]}>
           Forgot Password?
         </Text>
-        <Button buttonName="Login" />
+        <Button buttonName="Login" onPress={()=>navigation.navigate('HomePage')}/>
       </View>
       <View
         style={{
@@ -115,7 +115,7 @@ const Login = () => {
 
         <View style={{flexDirection: 'row'}}>
           <Text style={styles.headingText}>Don’t have an account yet? </Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=>{navigation.navigate('SignUp')}}>
             <Text style={{color: '#354169', fontWeight: 'bold'}}>
               Register Now
             </Text>

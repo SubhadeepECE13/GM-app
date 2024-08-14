@@ -1,7 +1,10 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, Image, View} from 'react-native';
 
-const Card = ({bgColor, imageUrl, heading, about, textColor, text}: any) => {
+const Card = ({bgColor, imageUrl, heading, about, textColor, text, navigationScreen}: any) => {
+  const navigation = useNavigation();
+
   return (
     <TouchableOpacity
       style={[
@@ -12,7 +15,7 @@ const Card = ({bgColor, imageUrl, heading, about, textColor, text}: any) => {
           flexDirection: 'row',
           borderRadius: 20,
         },
-      ]}>
+      ]} onPress={()=>{navigation.navigate(`${navigationScreen}`)}}>
       <Image
         source={imageUrl}
         style={{height: 120, width: 110, borderRadius: 10, marginRight: 20}}

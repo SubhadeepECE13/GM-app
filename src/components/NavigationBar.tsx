@@ -8,7 +8,7 @@ import account_image from '../assets/account_image.png';
 
 const NavigationBar = () => {
   return (
-    <View style={{flexDirection: 'row', marginVertical: 10, paddingBottom: 10, backgroundColor: '#e9e9e9'}}>
+    <View style={{flexDirection: 'row', paddingTop: 10, paddingBottom: 20,  backgroundColor: '#e9e9e9'}}>
       <TouchableOpacity style={styles.button}>
         <Image source={Home_image} style={styles.image} />
       </TouchableOpacity>

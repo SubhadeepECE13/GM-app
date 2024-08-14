@@ -11,9 +11,12 @@ import {
   TouchableOpacity,
   Dimensions,
 } from 'react-native';
+import ImageButton from '../components/ImageButton';
+import { useNavigation } from '@react-navigation/native';
 
 const Homepage = () => {
   const {width, height} = Dimensions.get('window');
+  const navigation = useNavigation();
   return (
     <View
       style={{
@@ -56,30 +59,9 @@ const Homepage = () => {
           height: '70%',
           borderRadius: 90,
         }}>
-        <TouchableOpacity>
-          <Image
-            source={ortho_image}
-            style={{width: 220, height: 190, borderRadius: 20}}
-          />
-          <Text style={styles.headingText}>GP and ORTHO</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity>
-          <Image
-            source={gyno_image}
-            style={{width: 220, height: 190, borderRadius: 20}}
-          />
-
-          <Text style={styles.headingText}>GYNECOLOGY</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity>
-          <Image
-            source={Skincare_image}
-            style={{width: 220, height: 190, borderRadius: 20}}
-          />
-          <Text style={styles.headingText}>SKIN CARE</Text>
-        </TouchableOpacity>
+          <ImageButton image = {ortho_image} text='GP and ORTHO' onPress={()=>{navigation.navigate('OrthoPage')}}/>
+          <ImageButton image = {gyno_image} text='GYNECOLOGY' onPress={()=>{navigation.navigate('GynoPage')}}/>
+          <ImageButton image = {Skincare_image} text='SKIN CARE' onPress={()=>{navigation.navigate('SkinCare')}}/>        
       </View>
     </View>
   );

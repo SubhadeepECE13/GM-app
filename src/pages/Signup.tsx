@@ -12,21 +12,20 @@ import {
 import Button from '../components/Button';
 import box from '../assets/box.png';
 import boxChecked from '../assets/Check.png';
+import { useNavigation } from '@react-navigation/native';
+import BackButton from '../components/BackButton';
 
 const Signup = () => {
   const {width, height} = Dimensions.get('window');
   const [checkbox, setCheckbox] = useState(false);
+  const navigation = useNavigation();
+
   function check() {
     setCheckbox(!checkbox);
   }
   return (
     <View style={{height}}>
-      <TouchableOpacity>
-        <Image
-          source={Arrow_image}
-          style={{width: 20, height: 20, marginLeft: 5, marginTop: 5}}
-        />
-      </TouchableOpacity>
+      <BackButton/>
       <View
         style={{
           height: '54%',
@@ -111,7 +110,7 @@ const Signup = () => {
           </Text>
         </View>
 
-        <Button buttonName="Sign Up" />
+        <Button buttonName="Sign Up" onPress={()=>{navigation.navigate('HomePage')}}/>
       </View>
       <View
         style={{
@@ -130,7 +129,7 @@ const Signup = () => {
           display: 'flex',
         }}>
         <Text style={styles.headingText}>Already Register? </Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>{navigation.navigate('Login')}}>
           <Text style={styles.text}>Login</Text>
         </TouchableOpacity>
       </View>

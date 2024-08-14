@@ -6,10 +6,12 @@ import ham_image from '../assets/ham_image.png'
 import Arrow_image from '../assets/Arrow_image.png'
 import image_13 from '../assets/image_13.png'
 import image_2 from '../assets/image_2.png'
+import { useNavigation } from '@react-navigation/native'
+import BackButton from '../components/BackButton'
 
 const Skincare = () => {
     const {width, height} = Dimensions.get('window');
-
+    const navigation = useNavigation();
     return (
       <View style={[styles.conainer, {height, width}]}>
         <View
@@ -19,12 +21,7 @@ const Skincare = () => {
             padding: 15,
             width,
           }}>
-          <TouchableOpacity>
-            <Image
-              source={Arrow_image}
-              style={{width: 20, height: 20, marginLeft: 5, marginTop: 5}}
-            />
-          </TouchableOpacity>
+          <BackButton/>
   
           <TouchableOpacity style={{}}>
             <Image source={ham_image} style={{width: 30, height: 30}} />
@@ -48,6 +45,7 @@ const Skincare = () => {
             about="Lorem ipsum dolor sit amet,"
             textColor="#FFFFFF"
             text="Lorem ipsum dolor sit amet,"
+            navigationScreen = 'ImagePage'
           />
           <Card
             bgColor="#C8A64E"

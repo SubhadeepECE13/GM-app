@@ -7,8 +7,10 @@ import {
   Dimensions,
 } from 'react-native';
 import Button from '../components/Button';
+import {useNavigation} from '@react-navigation/native';
 
 const Getstarted = () => {
+  const navigation = useNavigation();
   const {width, height} = Dimensions.get('window');
   return (
     <View style={{display: 'flex', justifyContent: 'space-between', height}}>
@@ -18,7 +20,7 @@ const Getstarted = () => {
         style={{width: 160, height: 160, marginLeft: 115}}
       />
       <View style={{marginBottom: 30, marginHorizontal: 10}}>
-        <Button buttonName="Get Started" />
+        <Button buttonName="Get Started" onPress={() => navigation.navigate('Login')}/>
       </View>
     </View>
   );
