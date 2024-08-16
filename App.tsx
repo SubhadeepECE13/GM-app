@@ -16,7 +16,7 @@ import Orthopage from './src/pages/Orthopage';
 import Imagepage from './src/pages/Imagepage';
 import Gynopage from './src/pages/Gynopage';
 import Skincare from './src/pages/Skincare';
-
+import Pdfpage from './src/pages/Pdfpage';
 const Stack = createStackNavigator();
 
 function App(): React.JSX.Element {
@@ -33,7 +33,7 @@ function App(): React.JSX.Element {
         <Stack.Screen name="ImagePage" component={Imagepage} />
       </Stack.Navigator>
     </NavigationContainer>
-    // <Skincare/>
+    //  <Pdfpage/>
   );
 }
 
