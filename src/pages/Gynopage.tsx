@@ -51,6 +51,7 @@ const Gynopage = () => {
             about="Lorem ipsum dolor sit amet,"
             textColor="#000000"
             text="Lorem ipsum dolor sit amet,"
+            navigationScreen = 'PdfPage'
           />
         </View>
         <NavigationBar />

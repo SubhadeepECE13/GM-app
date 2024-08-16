@@ -9,11 +9,6 @@ import {
     ScrollView
 } from 'react-native';
 import BackButton from '../components/BackButton';
-import ImageView from '../components/ImageView';
-import NavigationBar from '../components/NavigationBar';
-import image_x from '../assets/image_x.png';
-import image_y from '../assets/image_y.png';
-import image_z from '../assets/image_z.png';
 import ham_image from '../assets/ham_image.png';
 import pdf_image from '../assets/pdf_image.png';
 
@@ -35,7 +30,7 @@ const Pdfpage = () => {
                     justifyContent: 'space-between',
                     padding: 15,
                 }}>
-                <BackButton />
+                <BackButton/>
                 <Text style={[styles.text, {}]}>PDF</Text>
                 <TouchableOpacity style={{}}>
                     <Image source={ham_image} style={{ width: 30, height: 30, }} />

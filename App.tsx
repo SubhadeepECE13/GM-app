@@ -31,9 +31,9 @@ function App(): React.JSX.Element {
         <Stack.Screen name="SkinCare" component={Skincare} />
         <Stack.Screen name="GynoPage" component={Gynopage} />
         <Stack.Screen name="ImagePage" component={Imagepage} />
+        <Stack.Screen name="PdfPage" component={Pdfpage} />
       </Stack.Navigator>
     </NavigationContainer>
-    //  <Pdfpage/>
   );
 }
 
