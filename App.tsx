@@ -17,6 +17,8 @@ import Imagepage from './src/pages/Imagepage';
 import Gynopage from './src/pages/Gynopage';
 import Skincare from './src/pages/Skincare';
 import Pdfpage from './src/pages/Pdfpage';
+import Orthoimage from './src/pages/Orthoimage';
+import Gynoimage from './src/pages/Gynoimage';
 const Stack = createStackNavigator();
 
 function App(): React.JSX.Element {
@@ -31,6 +33,8 @@ function App(): React.JSX.Element {
         <Stack.Screen name="SkinCare" component={Skincare} />
         <Stack.Screen name="GynoPage" component={Gynopage} />
         <Stack.Screen name="ImagePage" component={Imagepage} />
+        <Stack.Screen name="Gynoimage" component={Gynoimage} />
+        <Stack.Screen name="Orthoimage" component={Orthoimage} />
         <Stack.Screen name="PdfPage" component={Pdfpage} />
       </Stack.Navigator>
     </NavigationContainer>

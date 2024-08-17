@@ -1,4 +1,4 @@
-import banner_image from '../assets/banner_image.png';
+import banner_image from '../assets/banner_image.jpg';
 import logo_image from '../assets/logo_image.png';
 import React from 'react';
 import {
@@ -17,7 +17,7 @@ const Getstarted = () => {
       <Image source={banner_image} style={{width, height: 300}} />
       <Image
         source={logo_image}
-        style={{width: 160, height: 160, marginLeft: 100, marginBottom:40}}
+        style={{width: 160, height: 160, marginLeft: 120, marginBottom:40}}
       />
       <View style={{marginBottom: 30, marginHorizontal: 10}}>
         <Button buttonName="Get Started" onPress={() => navigation.navigate('Login')}/>

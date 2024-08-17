@@ -42,7 +42,7 @@ const Gynopage = () => {
             about="Lorem ipsum dolor sit amet,"
             textColor="#FFFFFF"
             text="Lorem ipsum dolor sit amet,"
-            navigationScreen = 'ImagePage'
+            navigationScreen = 'Gynoimage'
           />
           <Card
             bgColor="#C8A64E"

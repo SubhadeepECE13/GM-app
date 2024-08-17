@@ -51,7 +51,7 @@ const Orthopage = () => {
           about="Lorem ipsum dolor sit amet,"
           textColor="#FFFFFF"
           text="Lorem ipsum dolor sit amet,"
-          navigationScreen = 'ImagePage'
+          navigationScreen = 'Orthoimage'
         />
         <Card
           bgColor="#C8A64E"

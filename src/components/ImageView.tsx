@@ -27,7 +27,7 @@ const ImageView: React.FC<props> = ({heading, image, btnName, about}) => {
       <Text style={styles.aboutText}>{about}</Text>
       <Image
         source={image}
-        style={{width: '100%', height: 160, marginTop: 10}}
+        style={{width: '100%', height:'70%', marginTop: 10}}
       />
     </View>
   );
