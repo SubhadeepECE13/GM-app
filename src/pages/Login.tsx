@@ -51,7 +51,7 @@ const Login = () => {
             source={email}
             style={{height: 20, width: 20, marginLeft: 10, top: 15}}
           />
-          <TextInput placeholder="RT89851@GMAIL.COM" style = {{width: '85%'}}/>
+          <TextInput placeholder="RT89851@GMAIL.COM" style = {{width: '85%'}} placeholderTextColor= 'gray'/>
         </View>
 
         <View
@@ -68,7 +68,7 @@ const Login = () => {
             source={lock}
             style={{height: 20, width: 20, marginLeft: 10, top: 15}}
           />
-          <TextInput placeholder="Password" style={{width: '80%'}} />
+          <TextInput placeholder="Password" style={{width: '80%'}} placeholderTextColor= 'gray'/>
           <Image
             source={eye}
             style={{height: 20, width: 20, marginLeft: 10, top: 15}}

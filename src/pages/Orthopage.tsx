@@ -13,6 +13,7 @@ import Card from '../components/Card';
 import image_1 from '../assets/image_1.png';
 import image_2 from '../assets/image_2.png';
 import { useNavigation } from '@react-navigation/native';
+import BackButton from '../components/BackButton';
 // import BackButton from '../components/BackButton';
 
 const Orthopage = () => {
@@ -27,7 +28,7 @@ const Orthopage = () => {
           padding: 15,
           width,
         }}>
-        {/* <BackButton/> */}
+        <BackButton/>
 
         <TouchableOpacity style={{}}>
           {/* <Image source={ham_image} style={{width: 30, height: 30}} /> */}
@@ -60,7 +61,7 @@ const Orthopage = () => {
           about="Lorem ipsum dolor sit amet,"
           textColor="#000000"
           text="Lorem ipsum dolor sit amet,"
-          navigationScreen = 'PdfPage'
+          navigationScreen = 'OrthoPdfPage'
         />
       </View>
       {/* <NavigationBar /> */}

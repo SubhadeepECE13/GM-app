@@ -49,7 +49,7 @@ const Homepage = () => {
         </TouchableOpacity>
       </View>
 
-      <View
+      {/* <View
         style={{
           width: '80%',
           height: 120,
@@ -77,15 +77,14 @@ const Homepage = () => {
         <View style={{justifyContent: 'center'}}>
           <Text>40 C</Text>
         </View>
-      </View>
+      </View> */}
       <View
         style={{
           display: 'flex',
           marginBottom: 50,
-          height: '70%',
+          height: '90%',
           borderRadius: 90,
           padding:20,
-          marginRight:30,
           width:'90%'
         }}>
         <ImageButton

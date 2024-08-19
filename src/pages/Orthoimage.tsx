@@ -34,9 +34,9 @@ const Imagepage = () => {
           padding: 15,
         }}>
         <BackButton/>
-        <Text style={[styles.text, {}]}>IMAGE</Text>
+        <Text style={[styles.text, {fontSize: 20}]}>IMAGE</Text>
         <TouchableOpacity style={{}}>
-          <Image source={ham_image} style={{width: 30, height: 30, right: 0}} />
+          {/* <Image source={ham_image} style={{width: 30, height: 30, right: 0}} /> */}
         </TouchableOpacity>
       </View>
 

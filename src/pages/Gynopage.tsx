@@ -5,7 +5,7 @@ import Card from '../components/Card'
 import ham_image from '../assets/ham_image.png'
 import image_gyno from '../assets/image_gyno.png'
 import image_2 from '../assets/image_2.png'
-// import BackButton from '../components/BackButton'
+import BackButton from '../components/BackButton'
 
 const Gynopage = () => {
     const {width, height} = Dimensions.get('window');
@@ -18,7 +18,7 @@ const Gynopage = () => {
             padding: 15,
             width,
           }}>
-          {/* <BackButton/> */}
+          <BackButton/>
   
           <TouchableOpacity style={{}}>
             {/* <Image source={ham_image} style={{width: 30, height: 30}} /> */}
@@ -51,7 +51,7 @@ const Gynopage = () => {
             about="Lorem ipsum dolor sit amet,"
             textColor="#000000"
             text="Lorem ipsum dolor sit amet,"
-            navigationScreen = 'PdfPage'
+            navigationScreen = 'GynoPdfPage'
           />
         </View>
         {/* <NavigationBar /> */}

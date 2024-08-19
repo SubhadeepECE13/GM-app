@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   Dimensions,
 } from 'react-native';
-// import BackButton from '../components/BackButton';
+import BackButton from '../components/BackButton';
 import ImageView from '../components/ImageView';
 // import NavigationBar from '../components/NavigationBar';
 import skin_card from '../assets/skin_card.jpg';
@@ -33,8 +33,8 @@ const Imagepage = () => {
           justifyContent: 'space-between',
           padding: 15,
         }}>
-        {/* <BackButton/> */}
-        <Text style={[styles.text, {}]}>IMAGE</Text>
+        <BackButton/>
+        <Text style={[styles.text, {fontSize: 20}]}>IMAGE</Text>
         <TouchableOpacity style={{}}>
           {/* <Image source={ham_image} style={{width: 30, height: 30, right: 0}} /> */}
         </TouchableOpacity>
