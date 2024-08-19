@@ -13,6 +13,7 @@ import {
 } from 'react-native';
 import ImageButton from '../components/ImageButton';
 import {useNavigation} from '@react-navigation/native';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 const Homepage = () => {
   const {width, height} = Dimensions.get('window');
@@ -41,10 +42,10 @@ const Homepage = () => {
           HOME
         </Text>
         <TouchableOpacity style={{}}>
-          <Image
-            source={ham_image}
+          {/* <Image
+            // source={ham_image}
             style={{width: 30, height: 30, position: 'absolute', right: 0}}
-          />
+          /> */}
         </TouchableOpacity>
       </View>
 
@@ -59,17 +60,17 @@ const Homepage = () => {
           marginTop: 30,
         }}>
         <View>
-          <Text style={{fontSize: 8, marginBottom: 4, textAlign: 'center'}}>
+          <Text style={{fontSize: 8, marginBottom: 4, textAlign: 'center',color:'white'}}>
             Welcome Back......
           </Text>
-          <Text style={{fontWeight: 'bold', color: 'black', fontSize: 16}}>
+          <Text style={{fontWeight: 'bold', color: 'white', fontSize: 16}}>
             Hi, Lorem Ipsum
           </Text>
-          <Text style={{marginBottom: 5, fontSize: 10}}>
+          <Text style={{marginBottom: 5, fontSize: 10,color:'white'}}>
             Lorem ipsum dolor sit amet
           </Text>
 
-          <Text style={{fontSize: 10}}>
+          <Text style={{fontSize: 10,color:'white'}}>
             consectetur adipiscing elit, sed do
           </Text>
         </View>
@@ -80,10 +81,12 @@ const Homepage = () => {
       <View
         style={{
           display: 'flex',
-          marginBottom: 60,
+          marginBottom: 50,
           height: '70%',
           borderRadius: 90,
-          width,
+          padding:20,
+          marginRight:30,
+          width:'90%'
         }}>
         <ImageButton
           image={ortho_image}
@@ -114,7 +117,7 @@ const Homepage = () => {
 const styles = StyleSheet.create({
   headingText: {
     fontWeight: 'bold',
-    color: 'black',
+    color: 'white',
     textAlign: 'center',
   },
   text: {

@@ -1,11 +1,11 @@
 import React from 'react'
 import { StyleSheet, Text, View, Image, TouchableOpacity, Dimensions, ImageBackground, } from 'react-native'
 import Card from '../components/Card'
-import NavigationBar from '../components/NavigationBar'
+// import NavigationBar from '../components/NavigationBar'
 import ham_image from '../assets/ham_image.png'
 import image_gyno from '../assets/image_gyno.png'
 import image_2 from '../assets/image_2.png'
-import BackButton from '../components/BackButton'
+// import BackButton from '../components/BackButton'
 
 const Gynopage = () => {
     const {width, height} = Dimensions.get('window');
@@ -18,20 +18,20 @@ const Gynopage = () => {
             padding: 15,
             width,
           }}>
-          <BackButton/>
+          {/* <BackButton/> */}
   
           <TouchableOpacity style={{}}>
-            <Image source={ham_image} style={{width: 30, height: 30}} />
+            {/* <Image source={ham_image} style={{width: 30, height: 30}} /> */}
           </TouchableOpacity>
         </View>
         <View style = {{height: '15%', width, paddingHorizontal: 20, justifyContent: 'space-between'}}>
           <Text style={styles.welcomeText}>GYNECOLOGY</Text>
-          <View style = {{flexDirection: 'row', justifyContent: 'space-between'}}>
+          {/* <View style = {{flexDirection: 'row', justifyContent: 'space-between'}}>
               <Text style={styles.headingText}> Lorem Ipsum</Text>
               <TouchableOpacity>
               <Text style={[styles.text, {}]}> View All &gt;</Text>
               </TouchableOpacity>
-          </View>
+          </View> */}
         </View>
   
         <View style={[styles.cardsSection, {width}]}>
@@ -54,7 +54,7 @@ const Gynopage = () => {
             navigationScreen = 'PdfPage'
           />
         </View>
-        <NavigationBar />
+        {/* <NavigationBar /> */}
       </View>
     );
 }

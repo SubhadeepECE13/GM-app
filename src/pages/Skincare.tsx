@@ -9,11 +9,11 @@ import {
   ImageBackground,
 } from 'react-native';
 import Card from '../components/Card';
-import NavigationBar from '../components/NavigationBar';
+// import NavigationBar from '../components/NavigationBar';
 import ham_image from '../assets/ham_image.png';
 import image_13 from '../assets/image_13.png';
 import image_2 from '../assets/image_2.png';
-import BackButton from '../components/BackButton';
+// import BackButton from '../components/BackButton';
 
 const Skincare = () => {
   const {width, height} = Dimensions.get('window');
@@ -26,10 +26,10 @@ const Skincare = () => {
           padding: 15,
           width,
         }}>
-        <BackButton />
+        {/* <BackButton /> */}
 
         <TouchableOpacity style={{}}>
-          <Image source={ham_image} style={{width: 30, height: 30}} />
+          {/* <Image source={ham_image} style={{width: 30, height: 30}} /> */}
         </TouchableOpacity>
       </View>
       <View
@@ -40,12 +40,12 @@ const Skincare = () => {
           justifyContent: 'space-between',
         }}>
         <Text style={styles.welcomeText}>SKIN CARE</Text>
-        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+        {/* <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <Text style={styles.headingText}> Lorem Ipsum</Text>
           <TouchableOpacity>
             <Text style={[styles.text, {}]}> View All &gt;</Text>
           </TouchableOpacity>
-        </View>
+        </View> */}
       </View>
 
       <View style={[styles.cardsSection, {width}]}>
@@ -68,7 +68,7 @@ const Skincare = () => {
           navigationScreen = 'PdfPage'
         />
       </View>
-      <NavigationBar />
+      {/* <NavigationBar /> */}
     </View>
   );
 };

@@ -21,9 +21,15 @@ const ImageButton: React.FC<props> = ({image, text, onPress}) => {
       <Image
         source={image}
         style={{
-          width: '100%',
-          height: 170,
-          borderRadius: 20,
+          width: '120%',
+          height: 120,
+         marginRight:10,
+        
+          padding:20,
+          flexDirection:'row',
+          justifyContent:'space-between',
+          marginTop:30,
+          
           objectFit: 'cover',
         }}
       />
